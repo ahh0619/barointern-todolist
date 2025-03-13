@@ -1,6 +1,6 @@
 import { Todo } from '@/types/todo';
 
-const BASE_URL = 'https://stream-acoustic-raven.glitch.me/todos';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL as string;
 
 /* 조회 */
 export const fetchTodos = async (): Promise<Todo[]> => {
