@@ -1,6 +1,4 @@
-'use client';
-
-import { Plus } from 'lucide-react';
+import { Loader2, Plus } from 'lucide-react';
 import { FC, useState } from 'react';
 
 import { useTodos } from '@/hooks/useTodos';
@@ -37,13 +35,19 @@ export const TodoInput: FC = () => {
               handleAdd();
             }
           }}
+          disabled={createMutation.isPending}
         />
         <button
           type="button"
           onClick={handleAdd}
+          disabled={createMutation.isPending}
           className="ml-4 flex h-9 w-9 items-center justify-center rounded-xl bg-[#4F4F4F] text-white hover:bg-black focus:bg-black focus:outline-none"
         >
-          <Plus size={20} />
+          {createMutation.isPending ? (
+            <Loader2 className="h-5 w-5 animate-spin" />
+          ) : (
+            <Plus size={20} />
+          )}
         </button>
       </div>
       {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
