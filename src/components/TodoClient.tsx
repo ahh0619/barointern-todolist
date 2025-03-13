@@ -51,7 +51,7 @@ const TodoClient: FC<TodoClientProps> = ({ serverTodos }) => {
       </p>
 
       {/* 탭 */}
-      <div className="mb-4 flex justify-center gap-4">
+      <div className="mb-4 flex justify-center gap-2">
         <button
           onClick={() => setFilter('ALL')}
           className={`rounded-lg px-3 py-2 ${
