@@ -17,16 +17,16 @@ export const metadata: Metadata = {
   description: '할 일을 기록 할 수 있는 투두리스트 입니다.',
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="ko">
-      <body className={`${pretendard.variable} font-sans antialiased`}>
-        <TodoQueryProvider>{children}</TodoQueryProvider>
-      </body>
-    </html>
-  );
-}
+}>): JSX.Element => (
+  <html lang="ko">
+    <body className={`${pretendard.variable} font-sans antialiased`}>
+      <TodoQueryProvider>{children}</TodoQueryProvider>
+    </body>
+  </html>
+);
+
+export default RootLayout;
