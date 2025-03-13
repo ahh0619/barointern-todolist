@@ -11,9 +11,12 @@ type TodoListProps = {
 export const TodoList: FC<TodoListProps> = ({ todos }) => {
   return (
     <ul className="mt-4 space-y-3">
-      {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} />
-      ))}
+      {todos
+        .slice()
+        .reverse()
+        .map((todo) => (
+          <TodoItem key={todo.id} todo={todo} />
+        ))}
     </ul>
   );
 };
