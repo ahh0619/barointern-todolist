@@ -1,5 +1,3 @@
-'use client';
-
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { createTodo, deleteTodo, fetchTodos, updateTodo } from '@/lib/api';

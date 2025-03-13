@@ -1,5 +1,3 @@
-'use client';
-
 import { FC } from 'react';
 
 import { Todo } from '@/types/todo';
