@@ -23,7 +23,7 @@ const TodoInput: FC = () => {
       <div className="flex items-center">
         <input
           type="text"
-          placeholder="할 일을 입력하세요"
+          placeholder="오늘의 할 일은?"
           className="flex-1 border-b-2 border-gray-300 py-1 placeholder-gray-400 focus:border-black focus:outline-none"
           value={title}
           onChange={(e) => {
