@@ -3,17 +3,13 @@
 import { FC, useState } from 'react';
 
 import Loading from '@/components/Loading';
-import { TodoFilterTabs } from '@/components/TodoFilterTabs';
-import { TodoStatus } from '@/components/TodoStatus';
 import { useTodos } from '@/hooks/useTodos';
-import { Todo } from '@/types/todo';
+import { TodoClientProps } from '@/types/todo';
 
-import { TodoInput } from './TodoInput';
-import { TodoList } from './TodoList';
-
-type TodoClientProps = {
-  serverTodos: Todo[];
-};
+import TodoFilterTabs from './TodoFilterTabs';
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
+import TodoStatus from './TodoStatus';
 
 const TodoClient: FC<TodoClientProps> = ({ serverTodos }) => {
   const { todos, isLoading, isError, error } = useTodos({

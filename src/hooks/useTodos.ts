@@ -1,11 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { createTodo, deleteTodo, fetchTodos, updateTodo } from '@/lib/api';
-import { Todo } from '@/types/todo';
-
-type UseTodosParams = {
-  initialData?: Todo[];
-};
+import { Todo, UseTodosParams } from '@/types/todo';
 
 export const useTodos = ({ initialData }: UseTodosParams = {}) => {
   const queryClient = useQueryClient();

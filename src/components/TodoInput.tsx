@@ -3,7 +3,7 @@ import { FC, useState } from 'react';
 
 import { useTodos } from '@/hooks/useTodos';
 
-export const TodoInput: FC = () => {
+const TodoInput: FC = () => {
   const [title, setTitle] = useState('');
   const [error, setError] = useState('');
   const { createMutation } = useTodos();
@@ -54,3 +54,5 @@ export const TodoInput: FC = () => {
     </div>
   );
 };
+
+export default TodoInput;

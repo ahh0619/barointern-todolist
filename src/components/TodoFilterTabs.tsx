@@ -1,15 +1,9 @@
 import { CheckSquare, List } from 'lucide-react';
 import { FC } from 'react';
 
-type TodoFilterTabsProps = {
-  filter: 'ALL' | 'COMPLETED';
-  setFilter: (value: 'ALL' | 'COMPLETED') => void;
-};
+import { TodoFilterTabsProps } from '@/types/todo';
 
-export const TodoFilterTabs: FC<TodoFilterTabsProps> = ({
-  filter,
-  setFilter,
-}) => {
+const TodoFilterTabs: FC<TodoFilterTabsProps> = ({ filter, setFilter }) => {
   return (
     <div className="mb-4 flex justify-center gap-2">
       <button
@@ -41,3 +35,5 @@ export const TodoFilterTabs: FC<TodoFilterTabsProps> = ({
     </div>
   );
 };
+
+export default TodoFilterTabs;

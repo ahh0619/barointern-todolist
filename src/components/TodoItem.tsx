@@ -4,13 +4,9 @@ import { X } from 'lucide-react';
 import { FC } from 'react';
 
 import { useTodos } from '@/hooks/useTodos';
-import { Todo } from '@/types/todo';
+import { TodoItemProps } from '@/types/todo';
 
-type TodoItemProps = {
-  todo: Todo;
-};
-
-export const TodoItem: FC<TodoItemProps> = ({ todo }) => {
+const TodoItem: FC<TodoItemProps> = ({ todo }) => {
   const { updateMutation, deleteMutation } = useTodos();
 
   const handleToggle = () => {
@@ -53,3 +49,5 @@ export const TodoItem: FC<TodoItemProps> = ({ todo }) => {
     </li>
   );
 };
+
+export default TodoItem;
