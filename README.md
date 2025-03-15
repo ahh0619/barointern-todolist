@@ -37,13 +37,17 @@
 ├── components
 │   ├── Loading.tsx
 │   ├── TodoClient.tsx
+│   ├── TodoFilterTabs.tsx
 │   ├── TodoInput.tsx
-│   ├── TodoList.tsx
 │   └── TodoItem.tsx
+│   ├── TodoList.tsx
+│   └── TodoStatus.tsx
 ├── hooks
 │   └── useTodos.ts
 ├── lib
 │   └── api.ts
+├── provides
+│   └── TodoQueryProvider.tsx
 ├── types
 │   └── todo.ts
 ```
